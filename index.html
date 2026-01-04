@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Check and Run link server vip Roblox</title>
+        <meta name="description" content="Công cụ kiểm tra, lưu trữ và mở link VIP Server Roblox nhanh chóng.">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main class="container">
+            <button id="themeToggle" title="Chuyển chế độ sáng/tối">🌓</button>
+            <h1>Kiểm tra & mở VIP Server Roblox</h1>
+
+
+            <div class="input-group">
+                <label for="vipLink">Nhập link VIP server</label>
+                <input id="vipLink" type="url" placeholder="https://www.roblox.com/games/12345/Name?privateServerId=abc" required autocomplete="off">
+            </div>
+            
+            <div class="input-group">
+                <label for="nameGame">Tên game (không bắt buộc)</label>
+                <input id="nameGame" type="text" placeholder="Ví dụ: Blox Fruits" autocomplete="off">
+            </div>
+
+            <div class="row">
+                <button id="saveBtn" type="button">Lưu</button>
+                <button id="openBtn" type="button" class="btn-primary">Mở / Chạy</button>
+            </div>
+
+            <section id="result" class="hidden">
+                <div class="result-card">
+                    <div id="warning" class="warning hidden"></div>
+                    
+                    <div class="compare-group">
+                        <div class="compare-row">
+                            <span class="compare-label">Link của bạn:</span>
+                            <div id="domainCompare" class="compare-value"></div>
+                        </div>
+                        <div class="compare-row">
+                            <span class="compare-label">Link chuẩn:</span>
+                            <div class="compare-value valid">www.roblox.com</div>
+                        </div>
+                    </div>
+
+                    <div class="label">Chi tiết kỹ thuật:</div>
+                    <pre id="analysis"></pre>
+                    
+                    <a id="runLink" class="btn-link" href="#" target="_blank"></a>
+                </div>
+            </section>
+
+            <section id="saved" class="saved">
+                <h2>Danh sách link đã lưu</h2>
+                <div class="table-responsive">
+                <table id="savedTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Link</th>
+                            <th scope="col">PlaceId</th>
+                            <th scope="col">LinkCode</th>
+                            <th scope="col">Đã xác thực</th>
+                            <th scope="col">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                </div>
+            </section>
+
+            
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
